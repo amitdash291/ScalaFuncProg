@@ -1,4 +1,6 @@
-object MyModule {
+package FpInScala
+
+object Basics {
   def absolute(num: Int): Int = {
     if (num < 0) -num
     else num
@@ -68,14 +70,14 @@ object MyModule {
     println(matchResult)
   }
 
-  def main(args: Array[String]) {
+  object Tester extends App {
     val array = Array(1, 2, 4, 7, 21)
     print("Array: ");
     array foreach (p => print(p + " "));
     println();
     println("Array sorted in increasing order: " + isArraySorted(array, (a: Int, b: Int) => a < b))
     println("Index of 2 in array: " + findInArrayAndGetIndex(array, (i: Int) => i == 2))
-    //matchAny(new Book("test"))
+    matchAny(new Book("test"))
     //printFormattedResult("absolute", 5, absolute)
     //printFormattedResult("fibonacci", 5, fibonacci)
   }
